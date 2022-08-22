@@ -133,6 +133,10 @@ export default class QRSVG {
     const element = this._element;
     const options = this._options;
 
+    if (options.backgroundOptions?.color === "transparent") {
+      return;
+    }
+
     if (element) {
       const gradientOptions = options.backgroundOptions?.gradient;
       const color = options.backgroundOptions?.color;

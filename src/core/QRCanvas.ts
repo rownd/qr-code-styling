@@ -129,6 +129,10 @@ export default class QRCanvas {
     const canvasContext = this.context;
     const options = this._options;
 
+    if (options.backgroundOptions.color === "transparent") {
+      return;
+    }
+
     if (canvasContext) {
       if (options.backgroundOptions.gradient) {
         const gradientOptions = options.backgroundOptions.gradient;
